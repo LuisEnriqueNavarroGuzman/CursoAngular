@@ -52,6 +52,8 @@ Extensiones útiles
 Angular Language Service
 Anguar Files
 
-                            Manual             
-Creación de componentes =>
-                            Automática (C.L.I)
+Creación de componentes =>  Manual
+                            Automática (C.L.I) => ng generate component empleado
+                                                  ng g c empleado      
+
+Componentes inline => ng g c ejemplotirar -s -t                                   
