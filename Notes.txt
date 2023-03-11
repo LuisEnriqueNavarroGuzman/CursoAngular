@@ -1,0 +1,57 @@
+¿Qué es?
+    -Un framework para crear aplicaciones SPA (Single Page Application)
+¿Quien lo ha desarrollado?
+    -Google
+¿Qué caracteristicas tiene?
+    -Separa frontend y backend de la aplicacion 
+    -simplifica el código
+    -Sigue el patrón MVC
+    -Basado en componentes
+    -Es de código abierto
+¿Que lenguaje utiliza?
+Typescript
+
+¿POR QUÉ UTILIZAR ANGULAR?
+El desarrollo de aplicaciones es rápido
+    -(la navegación por ellas tambien)
+Es modular
+    -(Reutilización)
+Fácil mantenimiento
+Es multiplataforma
+Future estable
+Gran soporte de herramientas
+Creciente demanda
+
+SOFTWARE NECESARIO
+Node.js
+    -Entorno JavaScript en tiempo de ejecución del lado del servidor
+NPM(Node package manager)
+    -Administrador de paquetes de Node.js
+ANGULAR
+    -Angular CLI (Command Line Interface)
+Visual Studio Code
+    -Un editor como otros tantos.
+    -De Microsoft
+GIT(adicional)
+    -Recomendable, pero no imprescindible                
+
+
+https://angular.io/guide/setup-local
+
+npm install -g @angular/cli
+ng new my-app   
+cd my-app
+ng serve --open    
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned or set-ExecutionPolicy Unrestricted
+
+Estructura
+    -src : carpeta para construir la app y desplegarla en un servidor para llevarla a producción.
+    -todo lo demas: son archivos de configuración durante el desarrollo
+
+Extensiones útiles
+Angular Language Service
+Anguar Files
+
+                            Manual             
+Creación de componentes =>
+                            Automática (C.L.I)
