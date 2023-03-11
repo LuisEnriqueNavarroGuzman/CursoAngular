@@ -12,17 +12,21 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Luis"
   apellido = "Navarro"
   /*private*/ edad = 18;
+  habilitacionCuadro = true;  
+  usuRegistrado = true;
   //empresa = "Pildoras informaticas"
   /*
   getEdad(){
     return this.edad;
   }
   */
-  llamaEmpresa(value: string){
-
+  /*llamaEmpresa(value: string){
+  }*/
+  getRegistroUsuario(){
+    console.log("getRegistroUsuario");
+    this.usuRegistrado = false;
   }
   constructor () {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 }

@@ -3,10 +3,14 @@
 <p>Edad del empleado {{ edad < 18 ? "Menor de edad" : "Mayor de edad" }}</p>
 <p>Empresa del empleado {{empresa.value}}</p>
 
-Introduce la empresa <input type="text" #empresa (keyup)="0">
+Introduce la empresa <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
 
 <br>
 <br>
+
+Registrado :  <input type="checkbox" id = "registro" [checked]="usuRegistrado">
+
+{{getRegistroUsuario()}}
 
 <!--  TEMPLATE REFERENCE VARIABLES 
     https://angular.io/guide/template-reference-variables

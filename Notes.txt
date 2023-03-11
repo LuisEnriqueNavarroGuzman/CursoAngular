@@ -60,3 +60,5 @@ Componentes inline => ng g c ejemplotirar -s -t
 
 Interpolación de strings
 https://angular.io/guide/interpolation
+
+Property Binding
