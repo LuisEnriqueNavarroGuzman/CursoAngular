@@ -1,4 +1,29 @@
 <p>Nombre del empleado {{nombre}}</p>
 <p>Apellido del empleado {{apellido}}</p>
 <p>Edad del empleado {{ edad < 18 ? "Menor de edad" : "Mayor de edad" }}</p>
-<p>Empresa del empleado {{empresa}}</p>
+<p>Empresa del empleado {{empresa.value}}</p>
+
+Introduce la empresa <input type="text" #empresa (keyup)="0">
+
+<br>
+<br>
+
+<!--  TEMPLATE REFERENCE VARIABLES 
+    https://angular.io/guide/template-reference-variables
+
+    <input type="button" value="Dale!" (click)="llamaEmpresa(empresa.value)"/>
+    SOBRE LA FUNCIÓN llamaEmpresa( )
+
+    No entendía el porqué de la declaración de esa función y cómo 
+    funcionaba para que al llamarla con el botón te mostrara el
+    valor de la variable empresa, hasta que leí los comentarios
+    donde alguien explicaba que realmente esa función no hace nada
+    y solo es para que la página recargue dinámicamente y actualice
+    el valor de empresa (que al cargar la página inicialmente estaba vacío),
+    por lo que pensé que si solo era necesario la ejecución de un evento para
+    que recargara la página se podría sustituir la llamada a la función llamaEmpresa
+    por un simple null, quedando el evento así:  
+    <input  type="button"  value="Dale!"  (click)="null"  >
+
+    Pues así también funciona.
+-->

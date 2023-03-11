@@ -12,12 +12,15 @@ export class EmpleadoComponent implements OnInit {
   nombre = "Luis"
   apellido = "Navarro"
   /*private*/ edad = 18;
-  empresa = "Pildoras informaticas"
+  //empresa = "Pildoras informaticas"
   /*
   getEdad(){
     return this.edad;
   }
   */
+  llamaEmpresa(value: string){
+
+  }
   constructor () {}
   ngOnInit(): void {
     throw new Error('Method not implemented.');
