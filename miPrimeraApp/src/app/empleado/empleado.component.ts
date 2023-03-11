@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-empleado',
@@ -8,6 +8,18 @@ import { Component } from '@angular/core';
   //template: "<p>Aquí iría un empleado</p>",
   //styles : ["p{background-color: red;}"]
 })
-export class EmpleadoComponent {
-
+export class EmpleadoComponent implements OnInit {
+  nombre = "Luis"
+  apellido = "Navarro"
+  /*private*/ edad = 18;
+  empresa = "Pildoras informaticas"
+  /*
+  getEdad(){
+    return this.edad;
+  }
+  */
+  constructor () {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }
