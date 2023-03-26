@@ -62,3 +62,57 @@ Interpolación de strings
 https://angular.io/guide/interpolation
 
 Property Binding
+
+Event Binding
+
+Eventos Angular 
+https://www.w3bai.com/es/angular/angular_events.html#gsc.tab=0
+angular.io/guide/event-binding-concepts
+
+Binding Bidireccional (Two way Binding)
+¿Qué necesitamos(No es necesario, pero si muy utíl)?
+"suggar sintax"
+Uso de la directiva ngModel
+Uso de banana in Box
+[] PropertyBinding ts a template  
+() EventBinding template a t
+[()] Two way Binding
+
+EN EL ARCHIVO app.module.ts agregar el import FormsModule
+Instalar bootstrap
+npm install bootstrap --save
+en angular.js agregar:
+  "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+   "scripts": [ "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+
+Directivas
+angular.io/guide/structural-directives
+tipos de directivas : 
+componente => angular => @Component
+                      => @Module  
+
+           => personalizadas
+
+estructura => nglf 
+           => ngFor
+           => ngSwitch
+           => ngSwitch
+           => ngPlural
+           => ngTemplate
+           => ngComponentOutlet
+
+atributo   => ngClass 
+           => ngStyle
+           => ngModel 
+
+Intalar algunas librerias
+npm i bootstrap jquery popper v.js          
+
+video 19 min 17:45 menciona que al crear un proyecto se escoje la naturaleza del proyecto con o sin sintaxis estricta(todas las variable se inicializan)
+lo soluciona agregando en el archivo tsconfig.json en el array compilerOptions la propiedad "strictPropertyInitialization" : false
+
+pasar informacion de un componente padre a un hijo => @Input()
+angular.io/guide/inputs-outputs

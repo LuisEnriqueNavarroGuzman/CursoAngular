@@ -1,26 +1,75 @@
+<!--Inicio Interpolación de strings ejemplo 1-->
 <p>Nombre del empleado {{nombre}}</p>
 <p>Apellido del empleado {{apellido}}</p>
-<p>Edad del empleado {{ edad < 18 ? "Menor de edad" : "Mayor de edad" }}</p>
-<p>Empresa del empleado {{empresa.value}}</p>
+<p>Edad del empleado {{ getEdad() < 18 ? "Menor de edad" : "Mayor de edad" }}</p>
+<!--Fin Interpolación de strings ejemplo 1-->
 
-Introduce la empresa <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
 
-<br>
-<br>
-
+<!--Inicio Interpolación de strings ejemplo 2-->
+<p>Event click</p>
+<p>Empresa del empleado {{InputEmpresa1.value}}</p>
+Introduce la empresa <input type="text" #InputEmpresa1>
+<input type="button" value="Dale!" (click)="llamaEmpresa(InputEmpresa1.value)"/>
+<br/><br/>
+<!--Fin Interpolación de strings ejemplo 2-->
+<!--Inicio Interpolación de strings ejemplo 3-->
+<p>Event keyup</p>
+<p>Empresa del empleado {{InputEmpresa2.value}}</p>
+Introduce la empresa <input type="text" #InputEmpresa2 (keyup)="0">
+<br/><br/>
+<!--Fin Interpolación de strings ejemplo 3-->
+<!--Inicio (Property Binding) [propiedad] 1-->
+<p>Property Binding</p>
+Introduce la empresa <input type="text" #InputEmpresa3 (keyup)="0" [disabled]="habilitacionCuadroProperty">
+<br/><br/>
+<!--Fin (Property Binding) [propiedad] 1-->
+<!--Inicio (Property Binding) [propiedad] 2-->
+<p>Property Binding</p>
 Registrado :  <input type="checkbox" id = "registro" [checked]="usuRegistrado">
-
 {{getRegistroUsuario()}}
+<!--Fin (Property Binding) [propiedad] 2-->
+<!--Inicio (Event Binding) template to fuction 1-->
+<p>Event  Binding</p>
+{{textoDeRegistro}}
+Registrado :  <input type="checkbox" id = "registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado()">
+{{getRegistroUsuario()}}
+<!--Fin (Event Binding) template to fuction 1-->
+<!--Inicio (Event Binding) template to fuction 2-->
+<p>Event  Binding</p>
+{{textoDeRegistro}}
+<br/>
+Registrado :  <input type="checkbox" id = "registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado('El usuario se acaba de registrar')">
+{{getRegistroUsuario()}}
+<!--Fin (Event Binding) template to fuction 2-->
+<!--Inicio (Event Binding) template to fuction 3-->
+<p>Event  Binding</p>
+{{textoDeRegistro2}}
+<br/>
+Registrado :  <input type="radio" value = "si" name="nRegistro" id = "registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado2 ($event)"><br/>
+No Registrado :  <input type="radio" value = "no" name="nRegistro"  (click)="setUsuarioRegistrado2 ($event)">
+{{getRegistroUsuario()}}
+<!--Fin (Event Binding) template to fuction 3-->
+
+<!--Inicio Binding bidireccional (two way binding) Incompleto No funciona del ts al template-->
+<p>Two way binding Incompleto</p>
+<p>Empresa del empleado {{empresa}}</p>
+Introduce la empresa <input type="text" (input)="cambiaEmpresa($event)">
+<!--Fin Binding bidireccional (two way binding) Incompleto No funciona del ts al template-->
+<!--Inicio Binding bidireccional (two way binding) Incompleto No funciona del ts al template-->
+<p>Two way binding</p>
+<p>Empresa del empleado {{empresa2}}</p>
+Introduce la empresa <input type="text" [(ngModel)]="empresa2">
+<!--Fin Binding bidireccional (two way binding) Incompleto No funciona del ts al template-->
 
 <!--  TEMPLATE REFERENCE VARIABLES 
     https://angular.io/guide/template-reference-variables
 
-    <input type="button" value="Dale!" (click)="llamaEmpresa(empresa.value)"/>
+    <input type="button" value="Dale!" (click)="llamaEmpresa(InputEmpresa.value)"/>
     SOBRE LA FUNCIÓN llamaEmpresa( )
 
     No entendía el porqué de la declaración de esa función y cómo 
     funcionaba para que al llamarla con el botón te mostrara el
-    valor de la variable empresa, hasta que leí los comentarios
+    valor de la variable InputEmpresa, hasta que leí los comentarios
     donde alguien explicaba que realmente esa función no hace nada
     y solo es para que la página recargue dinámicamente y actualice
     el valor de empresa (que al cargar la página inicialmente estaba vacío),
