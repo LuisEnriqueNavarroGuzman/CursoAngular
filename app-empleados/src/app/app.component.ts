@@ -1,32 +1,16 @@
-import { Component } from '@angular/core';
-import { Empleado } from './empleado.model';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  titulo = 'Listado de empleados';
-  empleados: Empleado[] = [
-      new Empleado("Juan","Díaz","Presidente",7500),
-      new Empleado("Ana","Raquel","Presidente",5500),
-      new Empleado("María","Fdez","Presidente",3500),
-      new Empleado("Laura","López","Presidente",2500),
-  ];
-  agregarEmpleado(): void{
-    let miEmpleado = new Empleado(
-      this.cuadroNombre,
-      this.cuadroApellido,
-      this.cuadroCargo,
-      this.cuadroSalario    
-    );
-    this.empleados.push(miEmpleado);
+export class AppComponent implements OnInit{
+  //primer metodo que se ejecuta al iniciar la app
+  constructor(){
   }
-   cuadroNombre: string = "";
-   cuadroApellido: string = "";
-   cuadroCargo: string = "";
-   cuadroSalario: number = 0;
-
-
+  //segundo metodo que se ejecuta al iniciar la app
+  ngOnInit(): void {
+  }
+ 
 }

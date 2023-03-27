@@ -115,4 +115,15 @@ video 19 min 17:45 menciona que al crear un proyecto se escoje la naturaleza del
 lo soluciona agregando en el archivo tsconfig.json en el array compilerOptions la propiedad "strictPropertyInitialization" : false
 
 pasar informacion de un componente padre a un hijo => @Input()
+pasar informacion de un componente hijo a un padre => @Output()
+
 angular.io/guide/inputs-outputs
+
+Crear servicio => g s servicio-empleados, 
+                  registrarlo en el archivo app.module.ts e 
+                  inyectarlo en donde se necesite
+
+Routing
+Barra de navegación
+https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp
+Agregar modulo, declaraciones y rutas a app.module.ts                  
