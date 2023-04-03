@@ -133,3 +133,44 @@ puntos importantes => paso de parámetros a rutas
                       eliminación de registro
                       paso de parámetros a rutas con queryParams
                       Ruta error personalizada     
+
+ ¿Qué es Firebase?
+ Plataforma en la nube propiedad de Google
+ ¿para qué sirve?
+ simplificar la gestión de datos en el desarrollo de aplicaciones 
+ ¿Cómo funciona? 
+ Ofreciendo BBDD en tiempo real desde la nube
+ BBDD no SQL
+ Almacena la información en ficheros JSON
+ Actualización automática de datos sin acción de desarrollador
+ Ventajas
+ Ofrece hosting para almacén de datos y despliegue (deploy) de app en servidor de manera sencilla
+ gestión de usuarios sencilla
+    Identificación de forma tradicional
+    Identificación con Google, Twitter, Facebook, GitHub
+ Operaciones CRUD directas sin picar código
+ Operaciones habituales con BBDD desde consola
+    Gestión de ficheros
+ Despliegue de servicios sencillo
+    Creación de funciones en la nube para automatizaciones
+    Simulaciones de triggers o disparadores
+    Etc
+ Envío de notificaciones a usuarios
+ Analytics incorporado
+
+============ Realtime ============     
+Almacén de datos en árbol JSON
+Soporte offline a Android e IOS
+Permitir ordenar o filtrar en consultas, pero no ambas a la vez
+Escritura mediante instrucciones individuales
+Escalablidad compleja
+Menos caro que FireStore(Sobrepasando cuotas gratuitas)
+==================================
+============ FireStore ===========   
+Almacén de datos en documentos y subdocumentos organizados en colecciones
+Soporte offline Android, iOS, Web
+Puede combinar ordenamiento y filtro en la misma consulta
+Escritura por lotes (batch)
+Escalabilidad sencilla y automática
+Más caro que Realtime(sobrepasando cuotas gratuitas)
+==================================
